@@ -1,9 +1,9 @@
-import { Environment } from 'ng-feature-flag';
+import { FeatureFlagType } from '@rebolon/ngx-feature-flag';
 
-export const environment: Environment = {
-  features: {
-    enabledFeature: false,
-    disabledFeature: false,
-  }
+const features: FeatureFlagType = {
+  enabledFeature: true,
+  disabledFeature: false,
 };
-
+export const environment = {
+  features
+};
