@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { IfFeatureOnDirective } from './if-feature-on.directive';
-import { NGX_FEATURE_FLAG_ENVIRONMENT_TOKEN } from './if-feature-on-environment.token';
+import { IfIsEnabledDirective } from './if-is-enabled.directive';
+import { NGX_FEATURE_FLAG_ENVIRONMENT_TOKEN } from './if-is-enabled-environment.token';
 
 @Component({
   selector: 'test-directive-if-feature-on',
-  imports: [IfFeatureOnDirective],
+  imports: [IfIsEnabledDirective],
   standalone: true,
   template: `
     <div>
@@ -18,7 +18,7 @@ export class TestDirectiveIfFeatureOnComponent {}
 
 let fixture: ComponentFixture<TestDirectiveIfFeatureOnComponent>;
 let sut: TestDirectiveIfFeatureOnComponent;
-describe('IfFeatureOnDirective', () => {
+describe('IfIsEnabledDirective', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       providers: [
@@ -32,7 +32,7 @@ describe('IfFeatureOnDirective', () => {
           }
         }
       ],
-      imports: [IfFeatureOnDirective]
+      imports: [IfIsEnabledDirective]
     }).compileComponents();
 
     fixture = TestBed.createComponent(TestDirectiveIfFeatureOnComponent);

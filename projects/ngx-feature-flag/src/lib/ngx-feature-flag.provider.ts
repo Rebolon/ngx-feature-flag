@@ -1,5 +1,5 @@
 import { EnvironmentProviders, makeEnvironmentProviders } from "@angular/core";
-import { NGX_FEATURE_FLAG_ENVIRONMENT_TOKEN } from "./if-feature-on-environment.token";
+import { NGX_FEATURE_FLAG_ENVIRONMENT_TOKEN } from "./if-is-enabled-environment.token";
 import { NgxFeatureFlagService } from "./ngx-feature-flag.service";
 import { Environment } from "./environment.type";
 

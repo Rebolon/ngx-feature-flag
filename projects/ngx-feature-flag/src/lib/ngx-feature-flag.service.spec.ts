@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { NGX_FEATURE_FLAG_ENVIRONMENT_TOKEN } from './if-feature-on-environment.token';
+import { NGX_FEATURE_FLAG_ENVIRONMENT_TOKEN } from './if-is-enabled-environment.token';
 import { NgxFeatureFlagService } from './ngx-feature-flag.service';
 
 describe('FeatureFlagService', () => {
@@ -27,10 +27,10 @@ describe('FeatureFlagService', () => {
   })
 
   it('Feature flag should be enabled', () => {
-    expect(service.isFeatureOn('enabledFeature')).toBeTrue()
+    expect(service.isEnabled('enabledFeature')).toBeTrue()
   });
 
   it('Feature flag should be disabled', () => {
-    expect(service.isFeatureOn('disabledFeature')).toBeFalse()
+    expect(service.isEnabled('disabledFeature')).toBeFalse()
   });
 });
